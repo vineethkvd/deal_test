@@ -1,4 +1,4 @@
-import 'package:deal_test/view/screens/loginscreen.dart';
+import 'package:deal_test/view/screens/loginhome.dart';
 import 'package:deal_test/view/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         '/': (context) => const SplashScreen(),
-        '/login': (context) => const LoginScreen(),
+        '/loginhome': (context) => const LoginHome(),
       },
-      initialRoute: '/',
+      initialRoute: '/loginhome',
     );
   }
 }
