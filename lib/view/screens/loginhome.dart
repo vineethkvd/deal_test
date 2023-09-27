@@ -31,7 +31,8 @@ class _LoginHomeState extends State<LoginHome> {
             color: Colors.white,
           ),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start, // Align children to the start
+            crossAxisAlignment:
+                CrossAxisAlignment.start, // Align children to the start
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(
@@ -52,7 +53,8 @@ class _LoginHomeState extends State<LoginHome> {
               Expanded(
                 flex: 1,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start, // Align text to the start
+                  crossAxisAlignment:
+                      CrossAxisAlignment.start, // Align text to the start
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 59),
@@ -76,11 +78,14 @@ class _LoginHomeState extends State<LoginHome> {
                             height: 46,
                             child: ElevatedButton(
                               style: ButtonStyle(
-                                backgroundColor:
-                                MaterialStateProperty.all(Color(0xFF5529A4)),
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color(0xFF5529A4)),
                               ),
                               onPressed: () {},
-                              child: Text("Sign In",style: TextStyle(fontFamily: 'Oswald-Bold'),),
+                              child: Text(
+                                "Sign In",
+                                style: TextStyle(fontFamily: 'Oswald-Bold'),
+                              ),
                             ),
                           ),
                           SizedBox(width: 16),
@@ -89,11 +94,14 @@ class _LoginHomeState extends State<LoginHome> {
                             height: 46,
                             child: ElevatedButton(
                               style: ButtonStyle(
-                                backgroundColor:
-                                MaterialStateProperty.all(Color(0xFF5529A4)),
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color(0xFF5529A4)),
                               ),
                               onPressed: () {},
-                              child: Text("Register",style: TextStyle(fontFamily: 'Oswald-Bold'),),
+                              child: Text(
+                                "Register",
+                                style: TextStyle(fontFamily: 'Oswald-Bold'),
+                              ),
                             ),
                           ),
                         ],

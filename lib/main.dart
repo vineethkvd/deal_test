@@ -1,9 +1,11 @@
 import 'package:deal_test/view/screens/loginhome.dart';
+import 'package:deal_test/view/screens/settingspage.dart';
 import 'package:deal_test/view/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,8 +17,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const SplashScreen(),
         '/loginhome': (context) => const LoginHome(),
+        '/settingspage': (context) => const SettingsPage(),
       },
-      initialRoute: '/loginhome',
+      initialRoute: '/settingspage',
     );
   }
 }
