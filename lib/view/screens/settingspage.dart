@@ -65,7 +65,7 @@ class _SettingsPageState extends State<SettingsPage> {
         SizedBox(
           child: Card(
             child: const ListTile(
-              leading: Icon(Icons.password, size: 36),
+              leading: Icon(Icons.password, size: 34),
               title: Text('Change password'),
             ),
           ),
