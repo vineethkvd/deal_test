@@ -1,3 +1,4 @@
+import 'package:deal_test/view/screens/homepage.dart';
 import 'package:deal_test/view/screens/loginhome.dart';
 import 'package:deal_test/view/screens/settingspage.dart';
 import 'package:deal_test/view/screens/splashscreen.dart';
@@ -18,8 +19,9 @@ class MyApp extends StatelessWidget {
         '/': (context) => const SplashScreen(),
         '/loginhome': (context) => const LoginHome(),
         '/settingspage': (context) => const SettingsPage(),
+        '/homepage': (context) => const HomePage(),
       },
-      initialRoute: '/settingspage',
+      initialRoute: '/homepage',
     );
   }
 }
