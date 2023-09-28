@@ -21,7 +21,7 @@ class _DealScreenState extends State<DealScreen> {
                   color: Colors.red,
                 )),
             Expanded(
-                flex: 1,
+                flex: 4,
                 child: Container(
                   color: Colors.yellow,
                 ))
