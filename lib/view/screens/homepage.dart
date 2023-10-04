@@ -1,8 +1,11 @@
+import 'package:deal_test/view/screens/nofificationscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:deal_test/view/screens/dealsample.dart';
 import 'package:deal_test/view/screens/screen2.dart';
 import 'package:deal_test/view/screens/screen3.dart';
 import 'package:deal_test/view/screens/settingspage.dart';
+
+import 'cartscreen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,18 +16,25 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentSelectedIndex = 0;
-  static const List<Widget> _pages = <Widget>[
-    DealScreen(),
-    Screen2(),
+
+  static List<Widget> _pages = <Widget>[
+    DealHomeScreen(),
+    NotificationScreen(),
     SettingsPage(),
-    Screen3(),
+    ShoppingCart(),
   ];
+
+  void _onTabTapped(int index) {
+    setState(() {
+      _currentSelectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My App"), // Add your app's title here
+        title: Text("My App"),
       ),
       drawer: Drawer(),
       body: _pages[_currentSelectedIndex],
@@ -32,11 +42,7 @@ class _HomePageState extends State<HomePage> {
         selectedItemColor: Colors.red,
         unselectedItemColor: Colors.brown,
         currentIndex: _currentSelectedIndex,
-        onTap: (value) {
-          setState(() {
-            _currentSelectedIndex = value;
-          });
-        },
+        onTap: _onTabTapped,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.fire_extinguisher_sharp),

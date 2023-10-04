@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const SplashScreen(),
         '/loginhome': (context) => const LoginHome(),
         '/settingspage': (context) => const SettingsPage(),
-        '/homepage': (context) => RestApiSample(),
+        '/homepage': (context) => const HomePage(),
       },
       initialRoute: '/homepage',
     );
