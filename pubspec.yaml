@@ -66,6 +66,16 @@ flutter:
      - assets/images/logoblack.png
      - assets/images/applogo.png
      - assets/images/toppng 1.png
+     - assets/images/marker.png
+     - assets/images/search.png
+     - assets/images/shopping-cart.png
+     - assets/images/menu-burger.png
+     - assets/images/deal.png
+     - assets/images/user.png
+     - assets/images/settings.png
+     - assets/images/bell.png
+     -
+     -
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -83,6 +93,9 @@ flutter:
      - family: Oswald-Bold
        fonts:
          - asset: assets/fonts/Oswald-Bold.ttf
+     - family: Poppins-Regular
+       fonts:
+         - asset: assets/fonts/Poppins-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

@@ -1,11 +1,10 @@
 import 'package:deal_test/view/screens/nofificationscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:deal_test/view/screens/dealsample.dart';
-import 'package:deal_test/view/screens/screen2.dart';
-import 'package:deal_test/view/screens/screen3.dart';
 import 'package:deal_test/view/screens/settingspage.dart';
 
 import 'cartscreen.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -34,30 +33,78 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
+        backgroundColor: Colors.white,
+        elevation: 0,
         title: Text("My App"),
+        actions: [
+          Image(
+            image: AssetImage('assets/images/search.png'),
+            width: 20,
+            height: 35,
+          ),
+          SizedBox(
+            width: 25,
+          ),
+          Image(
+            image: AssetImage('assets/images/marker.png'),
+            width: 20,
+            height: 35,
+          ),
+          SizedBox(
+            width: 25,
+          ),
+          Image(
+            image: AssetImage('assets/images/shopping-cart.png'),
+            width: 20,
+            height: 35,
+          ),
+          SizedBox(
+            width: 26,
+          ),
+        ],
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            DrawerHeader(
+                child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: CircleAvatar(
+                radius: 30,
+              ),
+            )),
+            ListTile(
+                title: Text("Name"),
+                leading: Icon(Icons.account_circle_rounded)),
+            ListTile(title: Text("Email"), leading: Icon(Icons.email_outlined)),
+            ListTile(title: Text("Settings"), leading: Icon(Icons.settings)),
+            ListTile(title: Text("Logout"), leading: Icon(Icons.logout_rounded))
+          ],
+        ),
+      ),
       body: _pages[_currentSelectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.brown,
+        selectedLabelStyle: TextStyle(fontFamily: 'Poppins-Regular'),
+        unselectedItemColor: Colors.black,
         currentIndex: _currentSelectedIndex,
         onTap: _onTabTapped,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.fire_extinguisher_sharp),
+            icon: Image(width: 30,height:30,image: AssetImage('assets/images/deal.png')),
             label: "Deals",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_active),
+            icon: Image(width: 20,height:20,image: AssetImage('assets/images/bell.png')),
             label: "Notifications",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_rounded),
+            icon: Image(width: 20,height:20,image: AssetImage('assets/images/user.png')),
             label: "Account",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_outlined),
+            icon: Image(width: 20,height:20,image: AssetImage('assets/images/settings.png')),
             label: "Cart",
           ),
         ],
