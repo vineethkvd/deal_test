@@ -32,7 +32,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     size: 30,
                     color: const Color(0xFF4A4A5F),
                   ),
-                  title: Text('Account', style: TextStyle(fontSize: 19)),
+                  title: Text('Account', style: TextStyle(fontSize: 19,fontFamily: '')),
                 ),
               ),
               Card(

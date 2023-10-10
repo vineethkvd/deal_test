@@ -84,30 +84,34 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: _pages[_currentSelectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.red,
-        selectedLabelStyle: TextStyle(fontFamily: 'Poppins-Regular'),
-        unselectedItemColor: Colors.black,
-        currentIndex: _currentSelectedIndex,
-        onTap: _onTabTapped,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Image(width: 30,height:30,image: AssetImage('assets/images/deal.png')),
-            label: "Deals",
-          ),
-          BottomNavigationBarItem(
-            icon: Image(width: 20,height:20,image: AssetImage('assets/images/bell.png')),
-            label: "Notifications",
-          ),
-          BottomNavigationBarItem(
-            icon: Image(width: 20,height:20,image: AssetImage('assets/images/user.png')),
-            label: "Account",
-          ),
-          BottomNavigationBarItem(
-            icon: Image(width: 20,height:20,image: AssetImage('assets/images/settings.png')),
-            label: "Cart",
-          ),
-        ],
+      bottomNavigationBar:  ClipRRect(
+        borderRadius: BorderRadius.circular(30),
+        child: BottomNavigationBar(
+          selectedItemColor: Colors.red,
+          selectedLabelStyle: TextStyle(fontFamily: 'Poppins-Regular'),
+          unselectedItemColor: Colors.black,
+          currentIndex: _currentSelectedIndex,
+          onTap: _onTabTapped,
+          items: const [
+            BottomNavigationBarItem(
+
+              icon: Image(width: 30,height:30,image: AssetImage('assets/images/deal.png')),
+              label: "Deals",
+            ),
+            BottomNavigationBarItem(
+              icon: Image(width: 20,height:20,image: AssetImage('assets/images/bell.png')),
+              label: "Notifications",
+            ),
+            BottomNavigationBarItem(
+              icon: Image(width: 20,height:20,image: AssetImage('assets/images/user.png')),
+              label: "Account",
+            ),
+            BottomNavigationBarItem(
+              icon: Image(width: 20,height:20,image: AssetImage('assets/images/settings.png')),
+              label: "Cart",
+            ),
+          ],
+        ),
       ),
     );
   }
