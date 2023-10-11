@@ -1,5 +1,6 @@
 import 'package:deal_test/view/screens/homepage.dart';
 import 'package:deal_test/view/screens/loginhome.dart';
+import 'package:deal_test/view/screens/loginpage.dart';
 import 'package:deal_test/view/screens/news_service.dart';
 import 'package:deal_test/view/screens/settingspage.dart';
 import 'package:deal_test/view/screens/splashscreen.dart';
@@ -21,8 +22,9 @@ class MyApp extends StatelessWidget {
         '/loginhome': (context) => const LoginHome(),
         '/settingspage': (context) => const SettingsPage(),
         '/homepage': (context) => const  HomePage(),
+        '/loginpage': (context) => const LoginPage(),
       },
-      initialRoute: '/homepage',
+      initialRoute: '/loginpage',
     );
   }
 }

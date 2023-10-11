@@ -74,6 +74,7 @@ flutter:
      - assets/images/user.png
      - assets/images/settings.png
      - assets/images/bell.png
+     - assets/images/loginpageimg.jpg
      -
      -
   #   - images/a_dot_ham.jpeg

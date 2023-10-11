@@ -69,11 +69,11 @@ class _HomePageState extends State<HomePage> {
           children: [
             DrawerHeader(
                 child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: CircleAvatar(
-                radius: 30,
-              ),
-            )),
+                  padding: EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 30,
+                  ),
+                )),
             ListTile(
                 title: Text("Name"),
                 leading: Icon(Icons.account_circle_rounded)),
