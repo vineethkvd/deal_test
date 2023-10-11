@@ -7,8 +7,9 @@ import 'package:deal_test/view/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() {
-  runApp(MyApp());
+void main () async{
+
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

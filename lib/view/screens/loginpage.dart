@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../modal/authentication/google_signin_page.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -101,6 +103,11 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     IconButton(
                       onPressed: () {
+                        signInWithGoogle().then((result) {
+                          if (result != null) {
+                            Navigator.of(context).pushNamed('/homepage');
+                          }
+                        });
                         print("clicked");
                       },
                       icon: Image.asset('assets/images/google_icon.png'),

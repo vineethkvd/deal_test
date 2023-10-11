@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:deal_test/view/screens/dealsample.dart';
 import 'package:deal_test/view/screens/settingspage.dart';
 
+import '../../modal/authentication/google_signin_page.dart';
 import 'cartscreen.dart';
-
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -67,24 +67,38 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
         child: Column(
           children: [
-            DrawerHeader(
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CircleAvatar(
-                    radius: 30,
-                  ),
-                )),
+            UserAccountsDrawerHeader(
+              accountName: Text("${name!}"),
+              accountEmail: Text("${email!}"),
+              currentAccountPicture: CircleAvatar(
+                  backgroundImage:  NetworkImage(
+                    imageUrl!,
+                  ),),
+            ),
             ListTile(
-                title: Text("Name"),
+                title: Text("${name!}"),
                 leading: Icon(Icons.account_circle_rounded)),
-            ListTile(title: Text("Email"), leading: Icon(Icons.email_outlined)),
-            ListTile(title: Text("Settings"), leading: Icon(Icons.settings)),
-            ListTile(title: Text("Logout"), leading: Icon(Icons.logout_rounded))
+            ListTile(
+                onTap: () {},
+                title: Text("${email!}"),
+                leading: Icon(Icons.email_outlined)),
+            ListTile(
+                onTap: () {},
+                title: Text("Settings"),
+                leading: Icon(Icons.settings)),
+            ListTile(
+                onTap: () {
+                  signOutGoogle();
+                  Navigator.of(context)
+                      .pushNamedAndRemoveUntil('/loginpage', (route) => false);
+                },
+                title: Text("Logout"),
+                leading: Icon(Icons.logout_rounded))
           ],
         ),
       ),
       body: _pages[_currentSelectedIndex],
-      bottomNavigationBar:  ClipRRect(
+      bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.circular(30),
         child: BottomNavigationBar(
           selectedItemColor: Colors.red,
@@ -94,20 +108,31 @@ class _HomePageState extends State<HomePage> {
           onTap: _onTabTapped,
           items: const [
             BottomNavigationBarItem(
-
-              icon: Image(width: 30,height:30,image: AssetImage('assets/images/deal.png')),
+              icon: Image(
+                  width: 30,
+                  height: 30,
+                  image: AssetImage('assets/images/deal.png')),
               label: "Deals",
             ),
             BottomNavigationBarItem(
-              icon: Image(width: 20,height:20,image: AssetImage('assets/images/bell.png')),
+              icon: Image(
+                  width: 20,
+                  height: 20,
+                  image: AssetImage('assets/images/bell.png')),
               label: "Notifications",
             ),
             BottomNavigationBarItem(
-              icon: Image(width: 20,height:20,image: AssetImage('assets/images/user.png')),
+              icon: Image(
+                  width: 20,
+                  height: 20,
+                  image: AssetImage('assets/images/user.png')),
               label: "Account",
             ),
             BottomNavigationBarItem(
-              icon: Image(width: 20,height:20,image: AssetImage('assets/images/settings.png')),
+              icon: Image(
+                  width: 20,
+                  height: 20,
+                  image: AssetImage('assets/images/settings.png')),
               label: "Cart",
             ),
           ],
