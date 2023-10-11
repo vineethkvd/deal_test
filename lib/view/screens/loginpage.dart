@@ -28,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
                     width: 290,
                     height: 290,
                     child: Image(
-                      image: AssetImage('assets/images/loginpageimg.jpg'),
+                      image: const AssetImage('assets/images/loginpageimg.jpg'),
                     ),
                   ),
                 ),
@@ -79,8 +79,8 @@ class _LoginPageState extends State<LoginPage> {
                           height: 40,
                           child: ElevatedButton(
                             style: ButtonStyle(
-                              backgroundColor:
-                              MaterialStateProperty.all(const Color(0xFF5529A4)),
+                              backgroundColor: MaterialStateProperty.all(
+                                  const Color(0xFF5529A4)),
                             ),
                             onPressed: () {},
                             child: const Text(
@@ -99,6 +99,12 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    IconButton(
+                      onPressed: () {
+                        print("clicked");
+                      },
+                      icon: Image.asset('assets/images/google_icon.png'),
+                    ),
                     TextButton(
                       onPressed: () {},
                       child: const Text(

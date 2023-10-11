@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   carousel_slider: ^4.2.1
   http: ^1.1.0
+  google_sign_in: ^6.1.5
+  firebase_core: ^2.17.0
+  firebase_auth: ^4.10.1
 
 dev_dependencies:
   flutter_test:
@@ -75,6 +78,7 @@ flutter:
      - assets/images/settings.png
      - assets/images/bell.png
      - assets/images/loginpageimg.jpg
+     - assets/images/google_icon.png
      -
      -
   #   - images/a_dot_ham.jpeg
