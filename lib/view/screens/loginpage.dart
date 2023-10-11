@@ -101,16 +101,19 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    IconButton(
-                      onPressed: () {
-                        signInWithGoogle().then((result) {
-                          if (result != null) {
-                            Navigator.of(context).pushNamed('/homepage');
-                          }
-                        });
-                        print("clicked");
-                      },
-                      icon: Image.asset('assets/images/google_icon.png'),
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: IconButton(
+                        onPressed: () {
+                          signInWithGoogle().then((result) {
+                            if (result != null) {
+                              Navigator.of(context).pushNamed('/homepage');
+                            }
+                          });
+                          print("clicked");
+                        },
+                        icon: Image.asset('assets/images/google_icon.png'),
+                      ),
                     ),
                     TextButton(
                       onPressed: () {},
