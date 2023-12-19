@@ -38,7 +38,8 @@ class _SendOtpState extends State<SendOtp> {
                   SizedBox(height: 16.0),
                   ElevatedButton(
                     onPressed: () {
-                      _sentOtpController.sendOtp(_phoneNumberController.text);
+                      String phoneNumber = "+91" + _phoneNumberController.text.trim();
+                      _sentOtpController.sendOtp(phoneNumber);
                     },
                     child: Text("Send OTP"),
                   ),
