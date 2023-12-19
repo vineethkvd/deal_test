@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "489012861723",
-    "project_id": "dealtest-aa0dd",
-    "storage_bucket": "dealtest-aa0dd.appspot.com"
+    "project_number": "13229163976",
+    "project_id": "dealtestapp",
+    "storage_bucket": "dealtestapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:489012861723:android:52bf642ace06159ad8d1be",
+        "mobilesdk_app_id": "1:13229163976:android:ca58e997d5734685d06cfd",
         "android_client_info": {
           "package_name": "com.avv.deal_test"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA08NEI6M_ERyWuKkbcUwU6xNRNRj6QPfA"
+          "current_key": "AIzaSyCSn6ivn-fdoXWBX-4w8_eJ0kVDsCUbm3w"
         }
       ],
       "services": {

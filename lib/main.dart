@@ -1,14 +1,11 @@
-import 'package:deal_test/view/screens/homepage.dart';
-import 'package:deal_test/view/screens/loginhome.dart';
-import 'package:deal_test/view/screens/loginpage.dart';
-import 'package:deal_test/view/screens/news_service.dart';
-import 'package:deal_test/view/screens/settingspage.dart';
-import 'package:deal_test/view/screens/splashscreen.dart';
+import 'package:deal_test/phone/view/sentopt.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-void main () async{
-
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -17,15 +14,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      routes: {
-        '/': (context) => const SplashScreen(),
-        '/loginhome': (context) => const LoginHome(),
-        '/settingspage': (context) => const SettingsPage(),
-        '/homepage': (context) => const  HomePage(),
-        '/loginpage': (context) => const LoginPage(),
-      },
-      initialRoute: '/loginpage',
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    return GetMaterialApp(
+      theme: ThemeData(primarySwatch: Colors.blue),
+      debugShowCheckedModeBanner: false,
+      home: const SendOtp(),
     );
   }
 }
